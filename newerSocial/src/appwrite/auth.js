@@ -44,14 +44,7 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      // 401 is expected if user is not logged in
-      const isUnauthorized =
-        error.code === 401 ||
-        error.code === "401" ||
-        error.type === "general_unauthorized_scope";
-      if (!isUnauthorized) {
 
-      }
       return null;
     }
   }
@@ -68,7 +61,6 @@ export class AuthService {
     try {
       return await this.account.createVerification(url);
     } catch (error) {
-      console.log("Appwrite service :: createVerification :: error", error);
       throw error;
     }
   }
@@ -77,7 +69,6 @@ export class AuthService {
     try {
       return await this.account.updateVerification(userId, secret);
     } catch (error) {
-      console.log("Appwrite service :: updateVerification :: error", error);
       throw error;
     }
   }

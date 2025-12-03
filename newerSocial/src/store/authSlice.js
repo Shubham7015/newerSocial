@@ -9,7 +9,7 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // ✅ login now stores actual userData directly
+    //stores actual userData directly
     login: (state, action) => {
       state.status = true;
       state.userData = action.payload; // fixed nesting issue

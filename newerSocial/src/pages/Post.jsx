@@ -36,7 +36,7 @@ export default function Post() {
     <div className="py-8 ">
       <Container>
 
-        {/* ✅ Image Centered */}
+        {/* Image Centered */}
         <div className="w-full flex justify-center mb-6 ">
           <div className="w-[50%] relative border rounded-xl p-2 flex justify-center bg-gray-100">
             <img
@@ -60,10 +60,9 @@ export default function Post() {
           </div>
         </div>
 
-        {/* ✅ Title Centered */}
+        {/*Title Centered */}
         <h1 className="text-2xl font-bold text-center mb-4">{post.title}</h1>
-
-        {/* ✅ Content Centered & not full width */}
+        {/* Content Centered & not full width */}
         <div className="max-w-3xl mx-auto browser-css text-center">
           {parse(post.content)}
         </div>
