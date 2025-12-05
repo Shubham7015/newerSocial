@@ -19,9 +19,9 @@ function VerifyEmail() {
             // Callback mode: Verify the email
             authService.updateVerification(userId, secret)
                 .then(() => {
-                    setMessage("Email verified successfully! Redirecting to login...")
+                    setMessage("Email verified successfully! Redirecting to home...")
                     setTimeout(() => {
-                        navigate('/login')
+                        navigate('/')
                     }, 3000)
                 })
                 .catch((err) => {
